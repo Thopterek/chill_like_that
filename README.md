@@ -1,6 +1,4 @@
 # chill_like_that
-Historical Encyclopedia of Programming Languages (HOPL) lists 8945 programming languages
+[Historical Encyclopedia of Programming Languages (HOPL)](https://hopl.info/) lists 8945 programming languages
 
-## We are at 1 out of 8945
-
-C, 
+Daily Leet Code till I got them all:
