@@ -1,2 +1,6 @@
 # chill_like_that
-1 out of 8,945 Historical Encyclopedia of Programming Languages (HOPL) lists 
+Historical Encyclopedia of Programming Languages (HOPL) lists 8945 programming languages
+
+## We are at 1 out of 8945
+
+C, 
