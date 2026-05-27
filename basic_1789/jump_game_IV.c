@@ -67,7 +67,7 @@ int count_minimal(int *arr, int size, int index, int counter) {
     if (j_jump != NULL) {
       free(j_jump);
     }
-    count_minimal(arr, size, index, counter);
+    // count_minimal(arr, size, index, counter);
   }
   return (counter);
 }
@@ -82,11 +82,8 @@ int minJumps(int *arr, int arrSize) {
   return (count_minimal(arr, arrSize, arrSize - 1, 0));
 }
 
-int main(void) {
-  printf("Broken test, so value is negative -> %d\n", minJumps(NULL, 0));
-  int example_one[] = {100, -23, -23, 404, 100, 23, 23, 23, 3, 404};
-  printf("Should be 3, but it's -> %d\n", minJumps(example_one, 9));
-  int *test = check_repetitive(example_one[0], 0, example_one, 9);
+void test(int *example, int to_check, int start_index, int size) {
+  int *test = check_repetitive(to_check, start_index, example, size);
   if (test != NULL) {
     printf("Indexes are at:");
     for (int i = 0; test[i] != '\0'; i++)
@@ -94,5 +91,17 @@ int main(void) {
     printf("\n");
     free(test);
   }
+}
+
+int main(void) {
+  printf("Broken test, so value is negative -> %d\n", minJumps(NULL, 0));
+  int example_one[] = {100, -23, -23, 404, 100, 23, 23, 23, 3, 404};
+  int example_two[] = {1};
+  int example_three[] = {7, 6, 9, 6, 9, 6, 9, 7};
+  printf("Should be 3, but it's -> %d\n", minJumps(example_one, 9));
+  printf("Testing a function check_repetitive below on example_three\n");
+  test(example_one, example_one[9], 9, 10);
+  test(example_two, example_two[0], 0, 1);
+  test(example_three, example_three[7], 7, 8);
   return (0);
 }
